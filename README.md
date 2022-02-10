@@ -25,13 +25,13 @@ tpot : threshold energy (eV) of photoionization of different ionization states o
 prob :branching probability of photoionization of major species\
 primary: primary photoelectron ionization rate (cm-3 s-1)\
 
-wv1,
-wv2,
-ssflux,$
-sigabs,
-sigionx,
-auger_energy,
-auger_wvln,
+wv1: Solar flux wavelength (lower bound )\
+wv2:  Solar flux wavelength (upper bound )\
+ssflux: Solar flux\
+sigabs: Photoabsorption cross-section (cm2)\
+sigionx: : Photoabsorption cross-section (cm2)\
+auger_energy: Auger Energy (eV) for major species\
+auger_wvln: : Auger Wavelength for major species\
 
 
 Electron Impact Cross-sections:\
@@ -42,55 +42,29 @@ siga: cross section for energy loss by PE of higher energy to PE of lower energy
 sigex:  excitation cross-section for each state, species, energy; cm2\
 sigix:  ionization cross-section for each state, species, energy; cm2\
 
-upflux,
-downflux,
-tflux,
-toaflux,
-pespec,$
-di,
-flag_states,$
-zmaj,
-zz,
-z,
-zt,$
-lat,
-lon,
-sza,
-idate,
-utsec,
-f107,
-f107a,
-ap,$
-first_neutral,
-first_ssflux,
-first_pxsect,
-first_exsect, $
-zcol,
-tau,
-tau_wv,
-flux,
-photoki,
-photoi,
-photoi_wv,
-aprod,
-aloss,$
-ts,
-tb, 
-ta, 
-eistates,$
-eden,
-etemp,$
-eiionz,
+upflux: Upward Photoelectron flux (cm-2 s-1 eV-1)\
+downflux: Downward Photoelectron flux (cm-2 s-1 eV-1)\
+tflux: Total Photoelectron flux (cm-2 s-1 eV-1); from transport calculation\
+pespec: Total Photoelectron flux (cm-2 s-1 eV-1); from local calculation\
+zmaj:Number density of major species cm-3\
+zz: Altitude in km\
+lat: Latitude in degrees\
+lon: : Longitude in degrees\
+sza: Solar Zenith angle in radians\
+idate: Date yyyydoy\
+utsec: Universal Time in seconds\
+f107: F10.7 daily index\
+f107a: F10.7 81-day average index\
+ap: Ap index\
+zcol: Column density (cm-2) of major species\
+tau: Optical depth\
+eden: Electron Density (cm-3)\
+etemp: ELectron Temperature (K)\
+eiionz
 eiionz_local1,
 eiionzk,
 exct_local,
 eiexcit,
-vem5577,
-vem6300,
-vem2972,
-n2a,o1d,o1s,$
-branch,
-tot_solflux,
 eiionz_transp,
 eiionzk_transp,
 exct_transp,
@@ -98,28 +72,18 @@ exct_transp1,
 exct_local1,
 eiionz_transp1
 
-;NOTE: Added eiionz_ht,tflux_ht,eiionz_v2,tot_solflux       
-;C Definitions:
-;C SIGS   elastic cross sections for each species, energy; cm2
-;C PE     elastic backscatter probabilities for each species, energy
-;C PI     inelastic  "
-;C C IIMAX  number of bins for secondary production for each primary energy
-;C WW     energy threshold for each excited state, species; eV
-;C WW, AO, OMEG, ANU, BB: revised excitation cross section parameters,
-;C        from Green & Stolarski (1972) formula (W, A, omega, nu, gamma)
-;C AUTO   autoionization coefs (= 0 as autoion. included in ion xsects)
-;C THI    energy threshold for each ionized state, species; eV
-;C AK, AJ, TS, TA, TB, GAMS, GAMB:  Jackman et al (1977) ioniz. params
-;C ENER   energy grid; eV
-;C DEL    energy grid spacing; eV
-;C NNN    number of excited states for each species
-;C NINN   number of ionized states for each species
-;C NUM    number of points on elastic data trid for each species
-;C EC     data energy grid of elastic xsects and backscatter ratios
-;C        for each species; eV
-;C CC     elastic xsects on data grid for each species, cm2
-;C CE     elastic backscat. probs on data grid for each species; cm2
-;C CI     inelastic "
-;C
-;C Array dimensions:
+sigs:  elastic cross sections for each species, energy; cm2\
+PE:     elastic backscatter probabilities for each species, energy\
+PI:     inelastic  "\
 
+WW:     energy threshold for each excited state, species; eV\
+THI:    energy threshold for each ionized state, species; eV\
+ener:   electron energy grid; eV\
+del:  electron  energy grid spacing; eV\
+NNN:    number of excited states for each species\
+NINN:   number of ionized states for each species\
+NUM:    number of points on elastic data trid for each species\
+EC:     data energy grid of elastic xsects and backscatter ratios  for each species; eV\
+CC:     elastic cross-sections on data grid for each species, cm2\
+CE:     elastic backscat. probs on data grid for each species; cm2\
+CI:     inelastic "  \
