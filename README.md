@@ -16,23 +16,23 @@ sec=fltarr(nmaj,nbins,nbins) ; (species,lower energy, upper energy) cross sectio
 siga=sec ; (species, lost energy, higher energy) cross section for energy loss by PE of higher energy to PE of lower energy
                                 ; through collisions (ionizatin & excitation) with species, cm^2, note it is different in format / use from
                                 ; sec in that the second dimension is energy lost by electron rather than energy of electron after collision
-sigloss=fltarr(nmaj,nbins) ; = total loss cross section
-; we consider production and loss due to cascade in energy through ionization & excitation and production of secondaries 
-; through ionization
 
 
 
 Important model parameters:\
-nmaj:  number of major species
-nbins: number of electron energy levels
-nei: number of energy levels
+nmaj:  number of major species\
+nbins: number of electron energy levels\
+# nei: number of energy levels\
 nst: number of electronic excitation states
 jmax : number of altitudes
 lmax : number of solar flux bins
 tpot : threshold energy (eV) of photoionization of different ionization states of  major species
 prob :branching probability of photoionization of major species
 primary: primary photoelectron ionization rate (cm-3 s-1)
-sigloss:
+sigloss:sigloss total loss cross section
+; we consider production and loss due to cascade in energy through ionization & excitation and production of secondaries 
+; through ionization
+
 iimax,
 upflux,
 downflux,
