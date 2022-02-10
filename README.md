@@ -11,34 +11,20 @@ localpe_ssflux.pro- Contains the input solar flux data\
 localpe_photoionz.pro- Calculates the photoionizaiton rates of major species\
 localpe.pro- Local calculation for photoelectron rates of major species\
 ace_etransport.pro- Trasnport calculation for photoelectron rates of major species using two-stream approach, based on GLOW model two-stream transport calulation \
-sec=fltarr(nmaj,nbins,nbins) ; (species,lower energy, upper energy) cross section for cascade forming PE with lower energy by 
-; PE with higher energy and collisions (ionization) with species, cm^2
-siga=sec ; (species, lost energy, higher energy) cross section for energy loss by PE of higher energy to PE of lower energy
-                                ; through collisions (ionizatin & excitation) with species, cm^2, note it is different in format / use from
-                                ; sec in that the second dimension is energy lost by electron rather than energy of electron after collision
 
 
 
 Important model parameters:\
 nmaj:  number of major species\
 nbins: number of electron energy levels\
-# nei: number of energy levels\
-nst: number of electronic excitation states
-jmax : number of altitudes
-lmax : number of solar flux bins
-tpot : threshold energy (eV) of photoionization of different ionization states of  major species
-prob :branching probability of photoionization of major species
-primary: primary photoelectron ionization rate (cm-3 s-1)
-sigloss:sigloss total loss cross section
-; we consider production and loss due to cascade in energy through ionization & excitation and production of secondaries 
-; through ionization
+nei: number of energy levels\
+nst: number of electronic excitation states\
+jmax : number of altitudes\
+lmax : number of solar flux bins\
+tpot : threshold energy (eV) of photoionization of different ionization states of  major species\
+prob :branching probability of photoionization of major species\
+primary: primary photoelectron ionization rate (cm-3 s-1)\
 
-iimax,
-upflux,
-downflux,
-tflux,
-toaflux,
-pespec,$
 wv1,
 wv2,
 ssflux,$
@@ -46,6 +32,21 @@ sigabs,
 sigionx,
 auger_energy,
 auger_wvln,
+
+
+Electron Impact Cross-sections:\
+sigloss: sigloss total loss cross section (cm2),i.e., production and loss due to cascade in energy through ionization & excitation and production of secondaries 
+through ionization \
+sec: cross section for cascade forming PE with lower energy by PE with higher energy and collisions (ionization) with species, cm^2\
+siga: cross section for energy loss by PE of higher energy to PE of lower energy through collisions (ionizatin & excitation) with species, cm^2\
+sigex:  excitation cross-section for each state, species, energy; cm2\
+sigix:  ionization cross-section for each state, species, energy; cm2\
+
+upflux,
+downflux,
+tflux,
+toaflux,
+pespec,$
 di,
 flag_states,$
 zmaj,
@@ -102,12 +103,7 @@ eiionz_transp1
 ;C SIGS   elastic cross sections for each species, energy; cm2
 ;C PE     elastic backscatter probabilities for each species, energy
 ;C PI     inelastic  "
-;C SIGA   energy loss cross section for each species, loss, energy; cm2
-;C SEC    secondary production xsect for species, Esec, Epri; cm2
-;C SIGEX  excitation xsect for each state, species, energy; cm2
-
-;C SIGIX  ionization xsect for each state, species, energy; cm2
-;C IIMAX  number of bins for secondary production for each primary energy
+;C C IIMAX  number of bins for secondary production for each primary energy
 ;C WW     energy threshold for each excited state, species; eV
 ;C WW, AO, OMEG, ANU, BB: revised excitation cross section parameters,
 ;C        from Green & Stolarski (1972) formula (W, A, omega, nu, gamma)
