@@ -74,16 +74,16 @@ eiionz_transp1
 
 sigs:  elastic cross sections for each species, energy; cm2\
 PE:     elastic backscatter probabilities for each species, energy\
-PI:     inelastic  "\
+PI:     inelastic backscatter probabilities for each species, energy\
 
 WW:     energy threshold for each excited state, species; eV\
 THI:    energy threshold for each ionized state, species; eV\
 ener:   electron energy grid; eV\
-del:  electron  energy grid spacing; eV\
+del:    electron  energy grid spacing; eV\
 NNN:    number of excited states for each species\
 NINN:   number of ionized states for each species\
 NUM:    number of points on elastic data trid for each species\
 EC:     data energy grid of elastic xsects and backscatter ratios  for each species; eV\
 CC:     elastic cross-sections on data grid for each species, cm2\
 CE:     elastic backscat. probs on data grid for each species; cm2\
-CI:     inelastic "  \
+CI:     inelastic backscat. probs on data grid for each species; cm2\
