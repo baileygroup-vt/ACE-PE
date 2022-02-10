@@ -84,4 +84,4 @@ CC:     elastic cross-sections on data grid for each species, cm2\
 CE:     elastic backscat. probs on data grid for each species; cm2\
 CI:     inelastic backscat. probs on data grid for each species; cm2\
 
-The PE model is run using sample_localpe_v6\
+Sample run for the PE model given in sample_localpe_v6.pro\
