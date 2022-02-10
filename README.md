@@ -1,6 +1,5 @@
 # ACE-PE
-The PE model is run using sample_localpe_v6\
-The main modules in the model are:\
+The main modules in the ACE-PE model are:\
 ace_common_blocks.prg- Common block for the PE model\ 
 localpe_setup_pxsect.pro - Calculates the photoionization cross-sections of the major species O,O2 and N2\
 localpe_setup_exsect.pro - Calculates the electron impact excitation cross-sections \
@@ -60,17 +59,14 @@ zcol: Column density (cm-2) of major species\
 tau: Optical depth\
 eden: Electron Density (cm-3)\
 etemp: ELectron Temperature (K)\
-eiionz
-eiionz_local1,
-eiionzk,
-exct_local,
-eiexcit,
-eiionz_transp,
-eiionzk_transp,
-exct_transp,
-exct_transp1,
-exct_local1,
-eiionz_transp1
+eiionz:Local electron impact ionozation rates(species,altitude) (cm-3 s-1)\
+eiionzk:Local electron impact ionozation rates(states,species,altitude) (cm-3 s-1) \
+
+eiionz_transp::Trasnport electron impact ionozation rates(species,altitude) (cm-3 s-1)\
+eiionzk_transp:Transport electron impact ionozation rates(states,species,altitude) (cm-3 s-1)\
+
+exct_transp:Transport electron impact excitation rates(states,species,altitude) (cm-3 s-1)\
+exct_local:Local electron impact excitation rates(states,species,altitude) (cm-3 s-1)\
 
 sigs:  elastic cross sections for each species, energy; cm2\
 PE:     elastic backscatter probabilities for each species, energy\
@@ -87,3 +83,5 @@ EC:     data energy grid of elastic xsects and backscatter ratios  for each spec
 CC:     elastic cross-sections on data grid for each species, cm2\
 CE:     elastic backscat. probs on data grid for each species; cm2\
 CI:     inelastic backscat. probs on data grid for each species; cm2\
+
+The PE model is run using sample_localpe_v6\
