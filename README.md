@@ -1,5 +1,6 @@
 # ACE-PE
 This is an IDL version of the GLOW model (https://www2.hao.ucar.edu/modeling/glow/code)\
+All assumptions and assumed parameters (e. g. cross sections) are the same. In most cases the procedures were developed to take advantage of IDL's simplified programming structure. A couple procedures are directly converted from the Fortran. The purpose of these codes is to allow GLOW to be more easily used by students in aeronomy classes. It has been compared to GLOW and compares well and so is fine for research purposes, though much slower. Some issues at low energy (<10 eV) exist because of a more simple empirical description of the thermal electron density.
 
 The main modules in the ACE-PE model are:\
 ace_common_blocks.prg- Common block for the PE model\ 
