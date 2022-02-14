@@ -1,4 +1,6 @@
 # ACE-PE
+This is an IDL version of the GLOW model (https://www2.hao.ucar.edu/modeling/glow/code)\
+
 The main modules in the ACE-PE model are:\
 ace_common_blocks.prg- Common block for the PE model\ 
 localpe_setup_pxsect.pro - Calculates the photoionization cross-sections of the major species O,O2 and N2\
